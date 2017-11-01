@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class BinSearchIntSet implements IntSet{
     private int datArr[];
     private int usedSize;
@@ -26,30 +28,55 @@ public class BinSearchIntSet implements IntSet{
 	}
 
 	   
+	int minSize=Math.min(temp.length,datArr.length);
 
-       
+	for(int i=0;i<minSize;i++){
+	    temp[i]=datArr[i];
+	}
+	System.out.println(Arrays.toString(temp));
 	/*Iterate through the array backwards. Compare each element with
 	 * the one that should be inserted. If the inserted element 
 	 * is larger than the corresponding element in the old array, it
 	 * should be inserted at that position.
 	 */
-	//int index = datArr.length;
-	int index=usedSize;
-	
+	//	int index = datArr.length;
+	//int index=0;
+       
+	/*
+      
+	int index = usedSize;
 	while( (index > 0) && (element < datArr[index-1]) ){
 	    temp[index-1] = datArr[index-1];
 	    index = index - 1;
 	}
 	temp[index] = element;
 	
-	/*Fill the rest of the array with the elements from datArr.
-	 */
-	for(int i=0; i<index-1; i++){
+	//Fill the rest of the array with the elements from datArr.
+	 
+	for(int i=0; i<index; i++){
 	    temp[i]=datArr[i];
 	}
+	*/
+	int indexOfInsert;
+	for(indexOfInsert=0;indexOfInsert<usedSize-1;indexOfInsert++){
+	    if(datArr[indexOfInsert]>element){
+		break;
+	    }
+	}
 	
+	for(int i=usedSize-2;i>=indexOfInsert;i=i-1){
+	    temp[i+1]=temp[i];
+	}
+	temp[indexOfInsert]=element;
+
+
+	
+
+
 	datArr = temp;
+	
 	return;
+       
     }
     
     public boolean contains(int element){
@@ -58,6 +85,11 @@ public class BinSearchIntSet implements IntSet{
 	else 
 	    return false;
     }
+    
+
+    
+
+
     /*
     public void remove(int element){
 	int removeIndex = binarySearch(element);
@@ -72,7 +104,7 @@ public class BinSearchIntSet implements IntSet{
 	    }
 	    datArr = temp;
 	    return;
-	}
+	    }
 	
 	return;
 	
