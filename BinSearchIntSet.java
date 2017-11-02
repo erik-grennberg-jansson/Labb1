@@ -22,7 +22,7 @@ x     *copying all the old elements from the last array and finally adding
 	usedSize++;
 	int[] temp;
 	if (usedSize>=datArr.length){
-	    temp = new int[usedSize];
+	    temp = new int[2*datArr.length];
 	}else{
 	    temp= new int[datArr.length];
 	}

@@ -1,4 +1,4 @@
-import java.util.Arrays;
+//import java.util.Arrays;
 
 public class BinSearchIntSet implements IntSet{
     private int datArr[];
@@ -10,7 +10,7 @@ public class BinSearchIntSet implements IntSet{
     
     /*Method for adding a new element to the set. This is done by creating
      *a new primitive array which can hold one additional element and 
-     *copying all the old elements from the last array and finally adding
+x     *copying all the old elements from the last array and finally adding
      * the new element.
      */
     public void add(int element){
@@ -33,7 +33,7 @@ public class BinSearchIntSet implements IntSet{
 	for(int i=0;i<minSize;i++){
 	    temp[i]=datArr[i];
 	}
-	System.out.println(Arrays.toString(temp));
+	//System.out.println(Arrays.toString(temp));
 	/*Iterate through the array backwards. Compare each element with
 	 * the one that should be inserted. If the inserted element 
 	 * is larger than the corresponding element in the old array, it
