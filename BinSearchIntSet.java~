@@ -42,7 +42,7 @@ public class BinSearchIntSet implements IntSet{
 	//	int index = datArr.length;
 	//int index=0;
        
-
+	/*
       
 	int index = usedSize;
 	while( (index > 0) && (element < datArr[index-1]) ){
@@ -51,34 +51,30 @@ public class BinSearchIntSet implements IntSet{
 	}
 	temp[index] = element;
 	
-	/*Fill the rest of the array with the elements from datArr.
-	 */
+	//Fill the rest of the array with the elements from datArr.
+	 
 	for(int i=0; i<index; i++){
 	    temp[i]=datArr[i];
 	}
+	*/
 	int indexOfInsert;
 	for(indexOfInsert=0;indexOfInsert<usedSize-1;indexOfInsert++){
 	    if(datArr[indexOfInsert]>element){
 		break;
 	    }
 	}
-	/*
+	
 	for(int i=usedSize-2;i>=indexOfInsert;i=i-1){
-	    
-
+	    temp[i+1]=temp[i];
 	}
+	temp[indexOfInsert]=element;
 
 
-	}
+	
 
 
 	datArr = temp;
-	for(int i=0; i<datArr.length;i++){
-	    System.out.println(datArr[i]);
-	  
-	    System.out.println("yeee");
-	}
-	*/
+	
 	return;
        
     }
