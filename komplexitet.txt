@@ -1,0 +1,14 @@
+
+Betrakta funktionen Contains. Frånsett jämförelser, med O(1), så är det enda som tar mer tid anropet till BinarySearch-metoden. 
+Den är en while-loop där index halveras i varje iteration. Givet då ett indata av storlek n=2^k(+1), innebär detta i värsta fall kommer vi behöva halvera k gånger, det vill säga k iterationer. Då n=2^k+(1) innebär detta att vi har O(log n). ( I bästa fall har vi dock enbart en iteration). Contains-metoden har med andra ord enbart ett anrop av komplexitet O(log n).  
+
+
+När vi kör "benchmark"-testet givet i uppgiften resulterar detta i de empiriska värdena: 
+ n=     10       s=      8,2
+     100            15,3
+    1000            48,8
+   10000            61,5
+  100000            71,3
+
+Vi ser att 
+ 

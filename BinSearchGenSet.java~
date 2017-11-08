@@ -43,7 +43,7 @@ public class BinSearchGenSet<E extends Comparable<? super E>> implements GenSet<
     public int binarySearch(E element){
 	int lowIndex = 0;
 	int maxIndex = datArr.size()-1;
-	//	System.out.println(Arrays.toString(datArr.toArray()));
+	System.out.println(Arrays.toString(datArr.toArray()));
 	while(lowIndex<=maxIndex){
 	    int middleIndex = ((lowIndex+maxIndex)/2);
 
