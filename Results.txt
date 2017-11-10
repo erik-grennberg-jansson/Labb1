@@ -1,0 +1,19 @@
+TASK 1
+
+a) converges towards (-2.25,-3.0625) with 10 for SD and 1 for NMUS. 
+b) the gradient is given by [4(x1+1)+5;16(x2+3)+1]; The Hessian is [4 0;0;16] with Eigenvalues 4 and 16 so if the point is optimal then it is also a global min (the function is convex), the gradient evaluated in the found point is 
+[4*(-1.25)+5;16(-0.0625)+1)]=[0,0] so it is indeed a global min.
+
+
+TASK 2
+
+
+a)Starting in [-1,-1] ;  With Steepest Descent: no convergence? 
+	      	      	 With Newtons method modified at (E-10 in (1,1) in 12 iterations).
+			 With Newtons method Levenberg-Marquart Same result as above in 12 iterations 
+			 With Newtons method unit step reaches same result in 5 iterations.
+			 
+b) The hessian will be given by [ 800x1^2+2-400(x2-x1^2) -400x1; -400x1 200] so the hessian determinant is 400(200x1^2-200x2+1). This expression attains both positive and negative values, so does it is not convex. 
+c)  TODO 
+
+3) It does not work since the hessian is singular. Levenberg gives the point -58 at 3,1 in 3 iterations. 
